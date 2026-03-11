@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit User</title>
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+<body>
+
+  <div class="formSection">
+    <h1>Update User</h1>
+
+<form action="/update/<%= user._id %>" method="POST">
+
+<input type="text" name="image" value="<%= user.image %>" class="sameValue"><br><br>
+
+<input type="text" name="username" value="<%= user.username %>" class="sameValue"><br><br>
+
+<input type="email" name="email" value="<%= user.email %>" class="sameValue"><br><br>
+
+<textarea name="message"><%= user.message %></textarea><br><br>
+
+<button type="submit">Update</button>
+
+</form>
+  </div>
+
+
+</body>
+</html>

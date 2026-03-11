@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/read.css">
+  <style>
+    .link{
+      height: 30px;
+      margin: 10px auto;
+      width: 200px;
+      
+    }
+  </style>
+</head>
+<body>
+  
+  <% if(users.length > 0){ %>
+
+<h1>All Users</h1>
+<div class="cardContainer">
+
+<% users.forEach(function(user){ %>
+
+<div class="userCard">
+  <div class="imageDiv">
+    <img src="<%= user.image %>">
+  </div>
+
+  <div class="usernameDiv">
+    <h2><%= user.username %></h2>
+  </div>
+
+  <div class="emailDiv">
+    <p class="emailPara"><%= user.email %></p>
+  </div>
+
+  <div class="messageDiv">
+    <p class="messagePara"><%= user.message %></p>
+  </div>
+
+  <div class="updateAndDelete">
+    <a href="/edit/<%= user._id %>" class="updateUrl">update</a>
+    <a href="/delete/<%= user._id %>">delete</a>
+  </div>
+</div>
+
+<% }) %>
+
+</div>
+
+<% } else { %>
+
+<h1>No user created</h1>
+<div class="link">
+  <a href="/">go back</a>
+</div>
+<% } %>
+</body>
+</html>
+
+
+
+

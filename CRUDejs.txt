@@ -1,0 +1,3 @@
+CRUD operation with the EJS and server side rendering 
+
+//user card component 
